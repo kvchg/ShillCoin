@@ -1,0 +1,114 @@
+LEARN HOW WEB APPS WORK BY EXTENDING SHILLCOIN!
+===============================================
+(this is OPTIONAL work, but it will make you stronger)
+(note: these challenges are intended to be done in order for a reason, but skip to the level appropriate for you)
+
+
+Beginner Challenges
+-------------------
+1) Read app.js, start to finish. drop a debugger; statement at different points in the code. use your dev tools to observe different variables inside eahc function. watch how data changes as it passed from one function to another. remove/edit the comments that are no longer necessary as you understand the concepts behind them. make the source code read less like a tutorial and more like production code.
+
+2) Make the app able to display more than 50 different cryptos in the picker (or less than 10); experiment with different numbers
+
+3) Add more 'sentiments' (emojis) to our rating scale
+
+4) Edit one or all of the themes (or for bonus points, create your own!)
+
+5) By now, you've discovered we have A LOT more data than we are actually showing in the table; try adding some new columns to the table and make sure the proper data is displayed dynamically
+
+Intermediate Challenges
+-----------------------
+1) there's a bug where the assets are displayed in a random order each time you 'refresh'... fix this
+
+2) there's some weirdness when a user does not enter a valid number in the conversion box... fix it and do proper validation on those inputs
+
+3) the tables are not sortable... it would be nice if they were... it would be even nicer if you didn't use a plug-in to do it ;)
+
+4) there are a number of places where code could be re-factored to be more readable, more D-R-Y, and adhere to the style we laid out in the first few methods ... make it so
+
+5) there is no error handing in any of our promises, nor are we checking any of our types. if our code fails, the whole app comes crashing down... add appropriate error handling and (rudimentary) type-checking where appropriate (hint: render() is called in 3 different ways and very trusting of how it's called) 
+
+
+Advanced Challenges
+-------------------
+1) create a way of saving state in the app, so that when a user is logged in, the coins they've added survive a page refresh
+
+2) write your own completely new feature and implement it with our existing init() => bind() => render() pattern
+
+3) hook the app up to a proper server and transition the requests for data to be server-side (then get rid of all the CORS nonsense)
+
+4) write some 'tests' for the app, so it (client + server) can be built with confidence
+
+5) the app is designed with an object literal (singleton) pattern, but there are many others that exist (pub/sub, revealing module, etc..) ... rebuild the app to use a different pattern; preferably split code up into multiple files and use a build-step to bring them together! remember, '42' is usually the answer...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+If you've done ALL this, and you're still reading... NICE FUCKING WORK.
+
+now rebuild the same app USING a framework like:
+
+Vue: https://vuejs.org/
+React: https://reactjs.org/
+Backbone: http://backbonejs.org/
+Angular: https://angularjs.org/
+Ember: https://emberjs.com/
+
+
+... and don't forget about your day job.
+
+<3
+AK

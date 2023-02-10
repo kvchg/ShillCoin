@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+    
+    <title>ShillCoin: The Crypto App</title>
+
+</head>
+
+
+<!-- this is used to 'reset' all the default browser styles -->
+<link rel="stylesheet" type="text/css" href="./css/normalize.css">
+
+<!-- this is where we put our own styles! -->
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+
+<body>
+    <!-- our fabulous loader, painstakingly designed -->
+    <div id="loader">
+        <img src="./img/preloader_v2.gif">
+    </div>
+    
+    <!-- the entire app's 'view' (or front-end) lives inside the 'app' div -->
+    <div id="app" class="themeDefault">
+        <div id="header">
+            ShillCoin
+        </div>
+        
+        <!-- main button controls & coinPicker  -->
+        <div id="controls">
+            
+            <div id="authButtons">
+                <button id="logIn">Log In</button><br/><br/>
+                <button id="logOut" disabled>Log Out</button>
+            </div>
+            
+            <div id="coinPicker">
+            <!--  content is dynamically injected here -->
+            </div>
+            
+            <div id="saveState">
+                <button id="memeBreak">Meme Break</button><br/><br/>
+                <button id="refreshData">Refresh Data</button>
+            </div>
+
+        </div>
+        
+        <!-- login state, instructions, and # of coins to show dropdown -->
+        <div id="aboveTable">
+            <div><span id="loginState">You are not logged in</span></div>
+            <div><span id="instructions">click assets to add them to the chart</span></div>
+            <div><span id="numberOfCoinShown">Show: 
+                <select>
+                    <option value="5">Top 5</option>
+                    <option value="10">Top 10</option>
+                    <option value="20">Top 20</option>
+                    <option value="30">Top 30</option>
+                    <option value="40">Top 40</option>
+                    <option value="50">Top 50</option>
+                    <option value="75">Top 75</option>
+                </select>
+            </span></div>
+        </div>
+        
+        <!-- the asset table -->
+        <div id="assetTable">
+            <table id="theTable">
+                <tbody>
+                    <tr id="tableHeader">
+                        <th>Symbol</th>
+                        <th>Value</th>
+                        <th>Market Cap</th>
+                        <th>1hr %</th>
+                        <th>24hr %</th>
+                        <th>Sentiment</th>
+                        <th>Fiat-To-Crypto Conversion</th>
+                        <th>Chart</th>
+                    </tr>
+                    <!-- contetent is dynamically injected here -->
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- the footer -->
+        <div id="footer">
+            <span>theme: </span>
+            <span><a href="#" id="defaultTheme">default</a></span>
+            <span><a href="#" id="foobarTheme">foobar</a></span>
+            <span><a href="#" id="masterHackerTheme">masterhacker</a></span>
+        </div>
+    </div>
+
+    <!-- all of the core functionality of our app live in here -->
+    <script type="text/javascript" src="./js/app.js"></script>
+    <!-- #dealWithIt 😎 -->
+</body>
+</html>

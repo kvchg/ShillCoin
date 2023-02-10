@@ -1,0 +1,400 @@
+/* containers */
+
+#loader {
+    text-align: center;
+    margin-right: 8%;
+}
+
+#app {
+    width: 100%;
+    height: 1000px;
+    padding-left: 18%;
+    padding-right: 18%;
+    padding-top: 1%;
+    display: none;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    font-size: 30px;
+}
+
+#controls {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+#coinPicker {
+    height: 100px;
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    width: 75%;
+    overflow-y: hidden;
+    padding-top: 2px;
+
+}
+
+/* the coin picker */
+
+#coinPicker div {
+    width: 75px;
+    background-color: #eee;
+    float: none;
+    height: 90%;
+    margin: 0 0.25%;
+    display: inline-block;
+    zoom: 1;
+    flex: 0 0 auto;
+    cursor: pointer;
+    opacity: .7;
+}
+
+#coinPicker div:hover {
+    opacity: 1;
+    border: 1px solid gray;
+}
+
+#coinPicker div:active {
+    background-color: #4CAF50;
+}
+
+div#coinPicker div.selected {
+    background-color: lightslategrey;
+    opacity: .6;
+}
+
+.coinPickerItem span {
+    margin-left: 12%;
+}
+
+.coinPickerItem span label {
+    font-family: monospace;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 11%;
+}
+
+.coinPickerItem img {
+    display: block;
+    margin: auto;
+    margin-top: -14%;
+}
+
+/* the stuff above the table */
+
+#aboveTable {
+    display: flex;
+
+}
+
+#aboveTable div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+#loginState {
+    margin-right: auto;
+}
+
+#numberOfCoinShown {
+    margin-left: auto;
+}
+
+#instructions {
+    /*text-align: center;*/
+    opacity: .4;
+}
+
+#assetTable {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+div {
+    padding-top: 8px
+}
+
+
+/* footer */
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
+#footer>span {
+    padding-left: 8px;
+}
+
+#footer>span a:hover {
+    text-decoration: underline;
+}
+
+#footer>span a:active {
+    text-decoration: underline;
+}
+
+/* link styles */
+
+a {
+    color: gray;
+
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+a:active {
+    color: black;
+}
+
+/* button styles */
+
+button {
+    color: #444444;
+    background: #F3F3F3;
+    border: 1px #DADADA solid;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-weight: bold;
+    font-size: 9pt;
+    outline: none;
+}
+
+button:hover {
+    border: 1px #C6C6C6 solid;
+    box-shadow: 1px 1px 1px #EAEAEA;
+    color: #333333;
+    background: #F7F7F7;
+}
+
+button:active {
+    box-shadow: inset 1px 1px 1px #DFDFDF;
+}
+
+button:disabled {
+    opacity: .5;
+}
+
+/* input styles */
+
+input[type=text] {
+    border-radius: 1px;
+    margin-right: 25px;
+    margin-left: 10px;
+    opacity: .5;
+}
+
+.toUSD {
+    border: 2px solid teal;
+}
+
+.toCrypto {
+    border: 2px solid black;
+}
+
+/* table styles */
+
+#theTable {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#theTable th {
+    border: 1px solid #ddd;
+    padding: 25px;
+}
+
+#theTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#theTable tr:hover {
+    background-color: #ddd;
+}
+
+#theTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: lightslategray;
+    color: #101010;
+}
+
+#theTable td {
+    text-align: center;
+    padding-top: 10px;
+}
+
+#theTable td.red {
+    color: darkred;
+}
+
+#theTable td.green {
+    color: darkgreen;
+}
+
+.sentiment {
+    padding-top: 2.6%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sentiment span {
+    opacity: .5;
+}
+
+.sentiment span:hover {
+    opacity: 1;
+    font-size: 200%;
+    cursor: pointer;
+}
+
+.sentiment span:active {
+    filter: invert(100%);
+}
+
+
+.conversion input {
+    vertical-align: super;
+    text-align: center;
+    padding: 3px;
+    width: 33%;
+}
+
+td.conversion {
+    padding-top: 1px !important;
+    /* UGH... sorry ... whatever, it happened */
+}
+
+/* meme break */
+
+.memeBreak {
+    text-align: center;
+}
+
+img#memeBreak {
+    height: 400px;
+}
+
+.sentiment span.thumbs {
+    font-size: 50px;
+}
+
+
+/* THEMES */
+
+/* foobar */
+.themeFoobar {
+    background-color: black;
+}
+
+.themeFoobar div {
+    font-color: white;
+    color: white;
+    font-family: fantasy;
+
+}
+
+.themeFoobar #coinPicker label {
+    color: darkgreen;
+
+}
+
+.themeFoobar #header {
+    color: aqua;
+    font-family: fantasy;
+
+}
+
+.themeFoobar #theTable tr:nth-child(even) {
+    background-color: darkgray;
+}
+
+.themeFoobar #theTable tr:nth-child(odd) {
+    background-color: darkslategray;
+}
+
+.themeFoobar #theTable tr:hover {
+    background-color: aqua;
+    color: black;
+}
+
+.themeFoobar #theTable th {
+    background-color: silver;
+}
+
+.themeFoobar a:hover {
+    text-decoration: underline;
+    color: yellow;
+}
+
+/* masterhacker */
+
+.themeMasterHacker {
+    background-color: #222220;
+}
+
+.themeMasterHacker div {
+    font-color: #AAFFAA;
+    color: #AAFFAA;
+    font-family: monospace;
+
+}
+
+.themeMasterHacker #coinPicker label {
+    color: #FF6F00;
+
+}
+
+.themeMasterHacker #header {
+    color: #FF0000;
+    font-family: monospace;
+
+}
+
+.themeMasterHacker #theTable tr:nth-child(even) {
+    background-color: #E3B735;
+}
+
+.themeMasterHacker #theTable tr:nth-child(odd) {
+    background-color: #F1C436;
+}
+
+.themeMasterHacker #theTable tr:hover {
+    background-color: #FF0000;
+    color: black;
+}
+
+.themeMasterHacker #theTable th {
+    background-color: #999999;
+    font-family: monospace;
+}
+
+.themeMasterHacker #theTable td {
+    font-family: monospace;
+}
+
+.themeMasterHacker #theTable td:not(.red):not(.green) {
+    color: blue;
+}
+
+.themeMasterHacker a:hover {
+    text-decoration: underline;
+    color: #80FF00;
+}

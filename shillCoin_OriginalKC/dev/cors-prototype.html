@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>foo</title>
+</head>
+<body>
+look in the console dude!
+<script type="text/javascript">
+//globals
+var allCoins = [];
+function getCryptos() {
+    console.log('lets do this... \n')
+    //grab the page
+    var parser = new DOMParser();
+    fetch('https://cors-anywhere.herokuapp.com/https://coinmarketcap.com/all/views/all/').then(function(response) {
+        response.text().then(function(html) {
+            //miniDOM parser
+            var htmlDoc = parser.parseFromString(html, "text/html");
+            // remove nodes with 'no-data' class
+            [].forEach.call(htmlDoc.querySelectorAll('.no-data'), function(e) {
+                e.parentNode.removeChild(e);
+            });
+            // get the data
+            var tableData = htmlDoc.querySelectorAll('tr');
+            tableData.forEach(function(row) {
+                var string = row.outerText
+                var data = string.split("\n")
+                var urlString = row.id.substring(3, row.id.length)
+                var obj = {
+                    rank: Number(data[2]),
+                    name: data[8].substring(0, 10),
+                    symbol: data[6],
+                    marketCap: data[12],
+                    price: data[15],
+                    supply: data[18],
+                    vol24hr: data[21],
+                    change1hr: data[23],
+                    change24hr: data[24],
+                    change7d: data[25],
+                    icon: urlString + ".png",
+                    url: `https://coinmarketcap.com/currencies/${urlString}`,
+                    shortCode: urlString	
+                }
+                if (data[2] !== 'Name') {
+                    allCoins.push(obj)
+                }
+            })
+        }).then(function() {
+               console.log('all finished!\n\nhere is everything i found\n\neverything is stored in the global variable "allCoins"\n\nall prices are real-time as of... now:');
+               console.log(allCoins)
+        })
+    })
+}
+// ugh... pyramid of doom...
+
+getCryptos();
+</script>
+</body>
+</html>
